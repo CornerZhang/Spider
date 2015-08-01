@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	makefile	/^CC=g++$/;"	m
+CPPFLAGS	makefile	/^CPPFLAGS=-std=c++11  -g$/;"	m
+Downloader	downloader.cpp	/^Downloader::Downloader()$/;"	f	class:Downloader	signature:()
+Downloader	downloader.h	/^	Downloader();$/;"	p	class:Downloader	access:public	signature:()
+Downloader	downloader.h	/^class Downloader{$/;"	c
+Downloader::Downloader	downloader.cpp	/^Downloader::Downloader()$/;"	f	class:Downloader	signature:()
+Downloader::Downloader	downloader.h	/^	Downloader();$/;"	p	class:Downloader	access:public	signature:()
+Downloader::code	downloader.h	/^	CURLcode code;$/;"	m	class:Downloader	access:private
+Downloader::conn	downloader.h	/^	CURL *conn;$/;"	m	class:Downloader	access:private
+Downloader::context	downloader.h	/^	string context;$/;"	m	class:Downloader	access:private
+Downloader::downloadPage	downloader.cpp	/^Downloader::downloadPage(){$/;"	f	class:Downloader	signature:()
+Downloader::downloadPage	downloader.h	/^	void downloadPage();$/;"	p	class:Downloader	access:public	signature:()
+Downloader::empty	downloader.cpp	/^Downloader::empty()$/;"	f	class:Downloader	signature:()
+Downloader::empty	downloader.h	/^	bool empty();$/;"	p	class:Downloader	access:public	signature:()
+Downloader::getContext	downloader.cpp	/^Downloader::getContext()$/;"	f	class:Downloader	signature:()
+Downloader::getContext	downloader.h	/^	string getContext();$/;"	p	class:Downloader	access:public	signature:()
+Downloader::response	downloader.h	/^	stack<string> response;$/;"	m	class:Downloader	access:private
+Downloader::setUrl	downloader.cpp	/^Downloader::setUrl(string url)$/;"	f	class:Downloader	signature:(string url)
+Downloader::setUrl	downloader.h	/^	void setUrl(string url);$/;"	p	class:Downloader	access:public	signature:(string url)
+Downloader::url	downloader.h	/^	string url;$/;"	m	class:Downloader	access:private
+Downloader::wmtx	downloader.h	/^	mutex wmtx;$/;"	m	class:Downloader	access:private
+Downloader::writer	downloader.h	/^     	static int writer(char *data, size_t size, size_t nmemb, string* writerData){$/;"	f	class:Downloader	access:private	signature:(char *data, size_t size, size_t nmemb, string* writerData)
+Downloader::~Downloader	downloader.cpp	/^Downloader::~Downloader()$/;"	f	class:Downloader	signature:()
+Downloader::~Downloader	downloader.h	/^	~Downloader();$/;"	p	class:Downloader	access:public	signature:()
+Spider	spider.cpp	/^Spider::Spider(string url)$/;"	f	class:Spider	signature:(string url)
+Spider	spider.h	/^	Spider(string);$/;"	p	class:Spider	access:public	signature:(string)
+Spider	spider.h	/^class Spider$/;"	c
+Spider::Spider	spider.cpp	/^Spider::Spider(string url)$/;"	f	class:Spider	signature:(string url)
+Spider::Spider	spider.h	/^	Spider(string);$/;"	p	class:Spider	access:public	signature:(string)
+Spider::empty	spider.cpp	/^Spider::empty()$/;"	f	class:Spider	signature:()
+Spider::empty	spider.h	/^	bool empty();$/;"	p	class:Spider	access:public	signature:()
+Spider::getRootNode	spider.cpp	/^Spider::getRootNode()$/;"	f	class:Spider	signature:()
+Spider::getRootNode	spider.h	/^	GumboNode* getRootNode();$/;"	p	class:Spider	access:public	signature:()
+Spider::getUrl	spider.cpp	/^Spider::getUrl()$/;"	f	class:Spider	signature:()
+Spider::getUrl	spider.h	/^	string getUrl();$/;"	p	class:Spider	access:public	signature:()
+Spider::loadPage	spider.cpp	/^Spider::loadPage(string page)$/;"	f	class:Spider	signature:(string page)
+Spider::loadPage	spider.h	/^	void loadPage(string);$/;"	p	class:Spider	access:public	signature:(string)
+Spider::one_search	spider.cpp	/^Spider::one_search(GumboNode *node)$/;"	f	class:Spider	signature:(GumboNode *node)
+Spider::one_search	spider.h	/^	void one_search(GumboNode*);$/;"	p	class:Spider	access:private	signature:(GumboNode*)
+Spider::output	spider.h	/^	GumboOutput *output;$/;"	m	class:Spider	access:private
+Spider::re	spider.h	/^	regex re;$/;"	m	class:Spider	access:private
+Spider::request	spider.h	/^	stack<string> request;$/;"	m	class:Spider	access:private
+Spider::root	spider.h	/^	GumboNode *root;$/;"	m	class:Spider	access:private
+Spider::search_for_link	spider.cpp	/^Spider::search_for_link(string strict)$/;"	f	class:Spider	signature:(string strict)
+Spider::search_for_link	spider.h	/^	void search_for_link(string);$/;"	p	class:Spider	access:public	signature:(string)
+Spider::wmtx	spider.h	/^	mutex wmtx;$/;"	m	class:Spider	access:private
+Spider::~Spider	spider.cpp	/^Spider::~Spider()$/;"	f	class:Spider	signature:()
+Spider::~Spider	spider.h	/^	~Spider();$/;"	p	class:Spider	access:public	signature:()
+code	downloader.h	/^	CURLcode code;$/;"	m	class:Downloader	access:private
+conn	downloader.h	/^	CURL *conn;$/;"	m	class:Downloader	access:private
+context	downloader.h	/^	string context;$/;"	m	class:Downloader	access:private
+download	main.cpp	/^void download(Downloader *dl, Spider *sp)$/;"	f	signature:(Downloader *dl, Spider *sp)
+downloadPage	downloader.cpp	/^Downloader::downloadPage(){$/;"	f	class:Downloader	signature:()
+downloadPage	downloader.h	/^	void downloadPage();$/;"	p	class:Downloader	access:public	signature:()
+empty	downloader.cpp	/^Downloader::empty()$/;"	f	class:Downloader	signature:()
+empty	downloader.h	/^	bool empty();$/;"	p	class:Downloader	access:public	signature:()
+empty	spider.cpp	/^Spider::empty()$/;"	f	class:Spider	signature:()
+empty	spider.h	/^	bool empty();$/;"	p	class:Spider	access:public	signature:()
+getContext	downloader.cpp	/^Downloader::getContext()$/;"	f	class:Downloader	signature:()
+getContext	downloader.h	/^	string getContext();$/;"	p	class:Downloader	access:public	signature:()
+getRootNode	spider.cpp	/^Spider::getRootNode()$/;"	f	class:Spider	signature:()
+getRootNode	spider.h	/^	GumboNode* getRootNode();$/;"	p	class:Spider	access:public	signature:()
+getUrl	spider.cpp	/^Spider::getUrl()$/;"	f	class:Spider	signature:()
+getUrl	spider.h	/^	string getUrl();$/;"	p	class:Spider	access:public	signature:()
+head	main.cpp	/^string head="zhidao.baidu.com";$/;"	v
+loadPage	spider.cpp	/^Spider::loadPage(string page)$/;"	f	class:Spider	signature:(string page)
+loadPage	spider.h	/^	void loadPage(string);$/;"	p	class:Spider	access:public	signature:(string)
+main	main.cpp	/^main(int argv,char *argc[])$/;"	f	signature:(int argv,char *argc[])
+one_search	spider.cpp	/^Spider::one_search(GumboNode *node)$/;"	f	class:Spider	signature:(GumboNode *node)
+one_search	spider.h	/^	void one_search(GumboNode*);$/;"	p	class:Spider	access:private	signature:(GumboNode*)
+output	spider.h	/^	GumboOutput *output;$/;"	m	class:Spider	access:private
+rcond	main.cpp	/^condition_variable rcond,wcond;$/;"	v
+re	spider.h	/^	regex re;$/;"	m	class:Spider	access:private
+request	spider.h	/^	stack<string> request;$/;"	m	class:Spider	access:private
+response	downloader.h	/^	stack<string> response;$/;"	m	class:Downloader	access:private
+rlock	main.cpp	/^unique_lock<mutex> rlock,wlock;$/;"	v
+root	spider.h	/^	GumboNode *root;$/;"	m	class:Spider	access:private
+search_for_link	spider.cpp	/^Spider::search_for_link(string strict)$/;"	f	class:Spider	signature:(string strict)
+search_for_link	spider.h	/^	void search_for_link(string);$/;"	p	class:Spider	access:public	signature:(string)
+setUrl	downloader.cpp	/^Downloader::setUrl(string url)$/;"	f	class:Downloader	signature:(string url)
+setUrl	downloader.h	/^	void setUrl(string url);$/;"	p	class:Downloader	access:public	signature:(string url)
+spider	main.cpp	/^void spider(Spider *sp, Downloader *dl)$/;"	f	signature:(Spider *sp, Downloader *dl)
+url	downloader.h	/^	string url;$/;"	m	class:Downloader	access:private
+wcond	main.cpp	/^condition_variable rcond,wcond;$/;"	v
+wlock	main.cpp	/^unique_lock<mutex> rlock,wlock;$/;"	v
+wmtx	downloader.h	/^	mutex wmtx;$/;"	m	class:Downloader	access:private
+wmtx	spider.h	/^	mutex wmtx;$/;"	m	class:Spider	access:private
+writer	downloader.h	/^     	static int writer(char *data, size_t size, size_t nmemb, string* writerData){$/;"	f	class:Downloader	access:private	signature:(char *data, size_t size, size_t nmemb, string* writerData)
+~Downloader	downloader.cpp	/^Downloader::~Downloader()$/;"	f	class:Downloader	signature:()
+~Downloader	downloader.h	/^	~Downloader();$/;"	p	class:Downloader	access:public	signature:()
+~Spider	spider.cpp	/^Spider::~Spider()$/;"	f	class:Spider	signature:()
+~Spider	spider.h	/^	~Spider();$/;"	p	class:Spider	access:public	signature:()
