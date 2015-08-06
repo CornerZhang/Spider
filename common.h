@@ -1,3 +1,6 @@
+#ifndef COMMON_H
+#define COMMON_H
+
 #include <iostream>
 #include <string>
 #include <stack>
@@ -8,3 +11,4 @@ using std::string;
 using std::mutex;
 using std::cout;
 using std::endl;
+#endif

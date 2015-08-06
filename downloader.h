@@ -1,3 +1,6 @@
+#ifndef DOWNLOADER_H
+#define DOWNLOADER_H
+
 #include <curl/curl.h>
 #include <assert.h>
 #include "common.h"
@@ -24,3 +27,4 @@ class Downloader{
 	void downloadPage();
 	string getContext();
 };
+#endif

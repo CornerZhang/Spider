@@ -12,8 +12,9 @@ Spider::~Spider()
 }
 
 void
-Spider::loadPage(string page)
+Spider::loadPage(string p)
 {
+    page = p;
     output = gumbo_parse_with_options(&kGumboDefaultOptions,page.c_str(),page.size());
     root = output->root;
 }
@@ -23,6 +24,7 @@ Spider::search_for_link(string strict)
 {
     re.assign(strict);
     one_search(root);
+    page.clear();
 }
 
 void
@@ -37,7 +39,7 @@ Spider::one_search(GumboNode *node)
 	    if(wmtx.try_lock()){
 		cout << string(rel->value) << endl;
 		request.push(string(rel->value));
-//		cout << request.size() << endl;
+		cout << request.size() << endl;
 		wmtx.unlock();
 	    }
 	    return;
@@ -78,6 +80,12 @@ Spider::empty()
 	wmtx.unlock();
     }
     return res;
+}
+
+int
+Spider::size()
+{
+    return request.size();
 }
 
 

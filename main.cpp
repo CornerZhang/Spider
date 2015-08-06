@@ -12,51 +12,41 @@ using namespace std;
 mutex rmtx,wmtx;
 condition_variable rcond,wcond;
 unique_lock<mutex> rlock,wlock;
-bool finished = false;
 string head="zhidao.baidu.com";
 
 void download(Downloader *dl, Spider *sp)
 {
-    
-    while(!sp->empty() || !dl->empty()){
-
+    while(true){
 	while(sp->empty()){
-	    rcond.wait_for(rlock,chrono::seconds(5));
-	    if(finished)return;
+	    cout << "downloader sleep" << endl;
+	    rcond.wait_for(rlock,chrono::seconds(10));
+	    if(sp->empty()){
+	      cout << sp->size() << endl;
+	      cout << "downloader exit" << endl;
+//	      return;
+	    }
 	}
 	string url = head + sp->getUrl();
-
 	dl->setUrl(url);
-	cout << "downlowd" << endl;
 	dl->downloadPage();
-	cout << "finish" << endl;
 	wcond.notify_all();
-
     }
-    cout << "downloader exit" << endl;
-    finished = true;
-    
 }
 
 void spider(Spider *sp, Downloader *dl)
 {
-    while(!sp->empty() || !dl->empty()){
-
+    while(true){
 	while(dl->empty()){
-	    wcond.wait_for(wlock,chrono::seconds(5));
-	    if(finished)return;
+	    wcond.wait_for(wlock,chrono::seconds(10));
+	    if(dl->empty()){
+	      cout << "spider exit" << endl;
+//	      return;
+	    }
 	}
-
-
     	sp->loadPage(dl->getContext());
-	cout << "search" << endl;
     	sp->search_for_link("");
-	cout << "out" << endl;
     	rcond.notify_all();
     }
-    cout << "spider exit" << endl;
-    finished = true;
-    
 }
 
 int 
@@ -73,7 +63,3 @@ main(int argv,char *argc[])
     delete dl;
     delete sp;
 }
-
-
-
-

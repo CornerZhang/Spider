@@ -18,9 +18,9 @@ Downloader::~Downloader()
 }
 
 void
-Downloader::setUrl(string url)
+Downloader::setUrl(string u)
 {
-    this->url = url;
+    url = u;
     code = curl_easy_setopt(conn,CURLOPT_URL,url.c_str());
     assert(code==CURLE_OK);
 }
@@ -28,11 +28,13 @@ Downloader::setUrl(string url)
 void
 Downloader::downloadPage(){
     assert(url.c_str()!=NULL);
-    curl_easy_perform(conn);
+    code = curl_easy_perform(conn);
+    assert(code==CURLE_OK);
     if(wmtx.try_lock()){
 	response.push(context);
 	wmtx.unlock();
     }
+    url.clear(); 
     context.clear();
 }
 
